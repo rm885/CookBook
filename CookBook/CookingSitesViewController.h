@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Websites.h"
 
-@interface CookingSitesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface CookingSitesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate, UIAlertViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-- (IBAction)newWebsite:(id)sender;
+@property (strong, nonatomic) Websites *database;
+@property (strong, nonatomic) Websites *selectedWebsite;
+
+- (IBAction)createNewWebsite:(id)sender;
+
+
 
 @end

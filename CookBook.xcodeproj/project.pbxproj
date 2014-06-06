@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB8753601941559C001BC927 /* CookingSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB87535F1941559C001BC927 /* CookingSitesViewController.m */; };
-		CB8753661941579A001BC927 /* Websites.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8753651941579A001BC927 /* Websites.m */; };
+		CB293547194177B100254E1A /* turkey.png in Resources */ = {isa = PBXBuildFile; fileRef = CB293546194177B100254E1A /* turkey.png */; };
+		CB2935491941780600254E1A /* turkey2.png in Resources */ = {isa = PBXBuildFile; fileRef = CB2935481941780600254E1A /* turkey2.png */; };
+		CB29354B194178CE00254E1A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB29354A194178CE00254E1A /* Default@2x.png */; };
+		CB29354D194178D200254E1A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CB29354C194178D200254E1A /* Default.png */; };
 		CBC9ADC21941465D007B9FDE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9ADC11941465D007B9FDE /* UIKit.framework */; };
 		CBC9ADC41941465D007B9FDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9ADC31941465D007B9FDE /* Foundation.framework */; };
 		CBC9ADC61941465D007B9FDE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9ADC51941465D007B9FDE /* CoreGraphics.framework */; };
@@ -35,10 +37,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		CB87535E1941559C001BC927 /* CookingSitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingSitesViewController.h; sourceTree = "<group>"; };
-		CB87535F1941559C001BC927 /* CookingSitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingSitesViewController.m; sourceTree = "<group>"; };
-		CB8753641941579A001BC927 /* Websites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Websites.h; sourceTree = "<group>"; };
-		CB8753651941579A001BC927 /* Websites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Websites.m; sourceTree = "<group>"; };
+		CB293546194177B100254E1A /* turkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turkey.png; sourceTree = "<group>"; };
+		CB2935481941780600254E1A /* turkey2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = turkey2.png; sourceTree = "<group>"; };
+		CB29354A194178CE00254E1A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		CB29354C194178D200254E1A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		CBC9ADBD1941465D007B9FDE /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC9ADC11941465D007B9FDE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CBC9ADC31941465D007B9FDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -89,8 +91,6 @@
 			children = (
 				CBC9ADF219414728007B9FDE /* WebViewViewController.h */,
 				CBC9ADF319414728007B9FDE /* WebViewViewController.m */,
-				CB87535E1941559C001BC927 /* CookingSitesViewController.h */,
-				CB87535F1941559C001BC927 /* CookingSitesViewController.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -98,8 +98,6 @@
 		CB8753631941577F001BC927 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				CB8753641941579A001BC927 /* Websites.h */,
-				CB8753651941579A001BC927 /* Websites.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -107,6 +105,10 @@
 		CBC9ADB21941465D007B9FDE = {
 			isa = PBXGroup;
 			children = (
+				CB29354C194178D200254E1A /* Default.png */,
+				CB29354A194178CE00254E1A /* Default@2x.png */,
+				CB2935481941780600254E1A /* turkey2.png */,
+				CB293546194177B100254E1A /* turkey.png */,
 				CBC9ADC71941465D007B9FDE /* CookBook */,
 				CBC9ADDF1941465E007B9FDE /* CookBookTests */,
 				CBC9ADC01941465D007B9FDE /* Frameworks */,
@@ -250,6 +252,10 @@
 			files = (
 				CBC9ADCC1941465D007B9FDE /* InfoPlist.strings in Resources */,
 				CBC9ADF11941470E007B9FDE /* MainStoryBoard.storyboard in Resources */,
+				CB293547194177B100254E1A /* turkey.png in Resources */,
+				CB2935491941780600254E1A /* turkey2.png in Resources */,
+				CB29354B194178CE00254E1A /* Default@2x.png in Resources */,
+				CB29354D194178D200254E1A /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,8 +293,6 @@
 				CBC9ADCE1941465D007B9FDE /* main.m in Sources */,
 				CBC9ADD21941465D007B9FDE /* AppDelegate.m in Sources */,
 				CBC9ADF419414728007B9FDE /* WebViewViewController.m in Sources */,
-				CB8753601941559C001BC927 /* CookingSitesViewController.m in Sources */,
-				CB8753661941579A001BC927 /* Websites.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

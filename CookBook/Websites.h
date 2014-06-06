@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Page.h"
 
 @interface Websites : NSObject
 
@@ -14,7 +15,7 @@
 @property (strong, nonatomic) NSMutableArray *websites;
 
 - (id)initWithTitle:(NSString *)title;
-- (void)newWebsite:(NSString *)website;
-- (BOOL)deleteWebsite:(NSString *)websiteToBeDeleted;
+- (void)newWebsite:(Websites *)website;
+- (BOOL)deleteWebsite:(Websites *)websiteToBeDeleted;
 
 @end

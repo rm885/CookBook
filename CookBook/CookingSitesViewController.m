@@ -13,35 +13,97 @@
 @end
 
 @implementation CookingSitesViewController
-@synthesize tableView;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+
+- (id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    self  = [super initWithCoder:aDecoder];
+    if (self)
+    {
+        _database = [[Websites alloc] init];
     }
     return self;
 }
 
-- (void)viewDidLoad
+- (void)viewWillAppear:(BOOL)animated
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [super viewWillAppear:animated];
+    
+    [_tableView reloadData];
 }
 
-- (void)viewDidUnload
+- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    [self setTableView:nil];
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
+    return _database.websites.count;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
+    static NSString *cellIdentifier = @"Cell";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    
+    if(cell == nil)
+        
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
+        cell.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+    }
+    
+    Websites *website = [_database.websites objectAtIndex:indexPath.row];
+    cell.textLabel.text = website.title;
+    
+    return cell;
 }
 
-- (IBAction)newWebsite:(id)sender {
+
+
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(editingStyle == UITableViewCellEditingStyleDelete)
+    {
+        Websites *website = [_database.websites objectAtIndex:indexPath.row];
+        [_database deleteWebsite:website];
+        
+        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+    }
+}
+
+- (IBAction)createNewWebsite:(id)sender
+{
+    UIAlertView *alert = [[UIAlertView alloc] init];
+    [alert setDelegate:self];
+    [alert setTitle:@"New Website"];
+    [alert setMessage:@"Please enter a new website"];
+    [alert setMessage:@"ex. http://www.apple.com/"];
+    [alert addButtonWithTitle:@"Cancel"];
+    [alert addButtonWithTitle:@"Create"];
+    [alert setAlertViewStyle:UIAlertViewStylePlainTextInput];
+    [alert show];
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    
+    if([alertView.title isEqualToString:@"New Website"] && buttonIndex == 1)
+    {
+        UITextField *textField = [alertView textFieldAtIndex:0];
+        
+
+    
+    }
 }
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -21,12 +21,12 @@
     }
 }
 
-- (void)newWebsite:(NSString *)website
+- (void)newWebsite:(Websites *)website
 {
     [_websites addObject:website];
 }
 
-- (BOOL)deleteWebsite:(NSString *)websiteToBeDeleted;
+- (BOOL)deleteWebsite:(Websites *)websiteToBeDeleted;
 {
     for(NSInteger i = 0; i < _websites.count; i++)
     {
