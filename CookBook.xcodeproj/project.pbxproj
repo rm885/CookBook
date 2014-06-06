@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB8753601941559C001BC927 /* CookingSitesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB87535F1941559C001BC927 /* CookingSitesViewController.m */; };
+		CB8753661941579A001BC927 /* Websites.m in Sources */ = {isa = PBXBuildFile; fileRef = CB8753651941579A001BC927 /* Websites.m */; };
 		CBC9ADC21941465D007B9FDE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9ADC11941465D007B9FDE /* UIKit.framework */; };
 		CBC9ADC41941465D007B9FDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9ADC31941465D007B9FDE /* Foundation.framework */; };
 		CBC9ADC61941465D007B9FDE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9ADC51941465D007B9FDE /* CoreGraphics.framework */; };
@@ -18,6 +20,8 @@
 		CBC9ADDC1941465E007B9FDE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBC9ADC31941465D007B9FDE /* Foundation.framework */; };
 		CBC9ADE41941465E007B9FDE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CBC9ADE21941465E007B9FDE /* InfoPlist.strings */; };
 		CBC9ADE71941465E007B9FDE /* CookBookTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC9ADE61941465E007B9FDE /* CookBookTests.m */; };
+		CBC9ADF11941470E007B9FDE /* MainStoryBoard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CBC9ADF01941470E007B9FDE /* MainStoryBoard.storyboard */; };
+		CBC9ADF419414728007B9FDE /* WebViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC9ADF319414728007B9FDE /* WebViewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,6 +35,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB87535E1941559C001BC927 /* CookingSitesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CookingSitesViewController.h; sourceTree = "<group>"; };
+		CB87535F1941559C001BC927 /* CookingSitesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CookingSitesViewController.m; sourceTree = "<group>"; };
+		CB8753641941579A001BC927 /* Websites.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Websites.h; sourceTree = "<group>"; };
+		CB8753651941579A001BC927 /* Websites.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Websites.m; sourceTree = "<group>"; };
 		CBC9ADBD1941465D007B9FDE /* CookBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CookBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBC9ADC11941465D007B9FDE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CBC9ADC31941465D007B9FDE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -47,6 +55,9 @@
 		CBC9ADE31941465E007B9FDE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CBC9ADE51941465E007B9FDE /* CookBookTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CookBookTests.h; sourceTree = "<group>"; };
 		CBC9ADE61941465E007B9FDE /* CookBookTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CookBookTests.m; sourceTree = "<group>"; };
+		CBC9ADF01941470E007B9FDE /* MainStoryBoard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryBoard.storyboard; sourceTree = "<group>"; };
+		CBC9ADF219414728007B9FDE /* WebViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewViewController.h; sourceTree = "<group>"; };
+		CBC9ADF319414728007B9FDE /* WebViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +84,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB8753621941576A001BC927 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				CBC9ADF219414728007B9FDE /* WebViewViewController.h */,
+				CBC9ADF319414728007B9FDE /* WebViewViewController.m */,
+				CB87535E1941559C001BC927 /* CookingSitesViewController.h */,
+				CB87535F1941559C001BC927 /* CookingSitesViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		CB8753631941577F001BC927 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB8753641941579A001BC927 /* Websites.h */,
+				CB8753651941579A001BC927 /* Websites.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		CBC9ADB21941465D007B9FDE = {
 			isa = PBXGroup;
 			children = (
@@ -106,9 +137,12 @@
 		CBC9ADC71941465D007B9FDE /* CookBook */ = {
 			isa = PBXGroup;
 			children = (
+				CB8753631941577F001BC927 /* Model */,
 				CBC9ADD01941465D007B9FDE /* AppDelegate.h */,
 				CBC9ADD11941465D007B9FDE /* AppDelegate.m */,
 				CBC9ADC81941465D007B9FDE /* Supporting Files */,
+				CBC9ADF01941470E007B9FDE /* MainStoryBoard.storyboard */,
+				CB8753621941576A001BC927 /* ViewControllers */,
 			);
 			path = CookBook;
 			sourceTree = "<group>";
@@ -215,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBC9ADCC1941465D007B9FDE /* InfoPlist.strings in Resources */,
+				CBC9ADF11941470E007B9FDE /* MainStoryBoard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -251,6 +286,9 @@
 			files = (
 				CBC9ADCE1941465D007B9FDE /* main.m in Sources */,
 				CBC9ADD21941465D007B9FDE /* AppDelegate.m in Sources */,
+				CBC9ADF419414728007B9FDE /* WebViewViewController.m in Sources */,
+				CB8753601941559C001BC927 /* CookingSitesViewController.m in Sources */,
+				CB8753661941579A001BC927 /* Websites.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +388,7 @@
 				GCC_PREFIX_HEADER = "CookBook/CookBook-Prefix.pch";
 				INFOPLIST_FILE = "CookBook/CookBook-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -361,6 +400,7 @@
 				GCC_PREFIX_HEADER = "CookBook/CookBook-Prefix.pch";
 				INFOPLIST_FILE = "CookBook/CookBook-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -418,6 +458,7 @@
 				CBC9ADEC1941465E007B9FDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBC9ADED1941465E007B9FDE /* Build configuration list for PBXNativeTarget "CookBookTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +467,7 @@
 				CBC9ADEF1941465E007B9FDE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
