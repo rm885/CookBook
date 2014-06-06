@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CookingSitesViewController : UIViewController
+@interface CookingSitesViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
+- (IBAction)newWebsite:(id)sender;
 
 @end

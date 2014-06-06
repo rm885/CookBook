@@ -99,20 +99,47 @@
                                                     <segue destination="uk6-Za-jBj" kind="push" id="t3u-qk-gqL"/>
                                                 </connections>
                                             </barButtonItem>
-                                            <barButtonItem key="rightBarButtonItem" systemItem="add" id="uA0-aN-p1C"/>
+                                            <barButtonItem key="rightBarButtonItem" systemItem="add" id="uA0-aN-p1C">
+                                                <connections>
+                                                    <action selector="newWebsite:" destination="FGX-J0-ttT" id="jGP-g0-ZJR"/>
+                                                </connections>
+                                            </barButtonItem>
                                         </navigationItem>
                                     </items>
                                 </navigationBar>
+                                <connections>
+                                    <outlet property="dataSource" destination="FGX-J0-ttT" id="tpC-jA-7us"/>
+                                    <outlet property="delegate" destination="FGX-J0-ttT" id="tHa-EC-6Kn"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Hwt-KK-mmF"/>
+                    <connections>
+                        <outlet property="tableView" destination="zon-xz-5OG" id="Yks-Oa-lfD"/>
+                    </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="558" y="108"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CookingSitesViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CookingSitesViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="newWebsite:"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="WebViewViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/WebViewViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="refresh:"/>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
